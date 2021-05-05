@@ -1,6 +1,7 @@
 
+package com.sample.linkedlist;
 public class LinkedList {
-	;
+	
 
 	Node head;
 
