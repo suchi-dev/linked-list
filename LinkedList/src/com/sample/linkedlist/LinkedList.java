@@ -20,6 +20,9 @@ public class LinkedList {
 	 */
 	public void printNodes(Node head) {
 		Node last = head;
+		if(head == null) {
+			System.out.println("Empty linked list");
+		}
 		while (last != null) {
 			System.out.print(last.data + "|");
 			last = last.next;
@@ -63,7 +66,12 @@ public class LinkedList {
 		System.out.println();
 		System.out.println("Deleting node at position 1:");
 		ll.printNodes(ll.head);
+		System.out.println();
+		System.out.println("Deleting the linked list");
+		ll.deleteLinkedList();
+		ll.printNodes(ll.head);
 	}
+	
 
 	/*
 	 * Inserting a new node at the beginning. new node -> next will be the original
@@ -170,6 +178,15 @@ public class LinkedList {
 		Node next = prev.next.next;
 		prev.next = next;
 		
+	}
+	
+	/*
+	 * Delete the entire linked list
+	 * we need to set the head as null
+	 * 
+	 */
+	public void deleteLinkedList() {
+		head = null;
 	}
 
 }
